@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee                       
+                  http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+	<!-- deployment descriptor 배포 상세 정보 -->
+	<display-name>web008_servlet_build</display-name>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default</welcome-file>
+	</welcome-file-list>
+
+
+	<!-- 주소에 매핑되는 class 선언 -->
+	<servlet>
+		<servlet-name>hello</servlet-name>
+		<servlet-class>com.min.edu.HelloServlet</servlet-class>
+	</servlet>	
+	<!-- 주소에 매핑 -->
+	<servlet-mapping>
+		<servlet-name>hello</servlet-name>
+		<url-pattern>/hello.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>second</servlet-name>
+		<servlet-class>com.min.edu.SecondServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>second</servlet-name>
+		<url-pattern>/secondServlet.do</url-pattern>
+	</servlet-mapping>
+	
+	
+</web-app>
+
+
+<!-- 
+	Servlet url-mapping: 1:1 매핑 
+	hierarchy: 계층 구조 
+	life-cycle: 생명주기 init() -> service() -> destroy() 
+-->
+
+
